@@ -8,6 +8,49 @@
 <body>
 
     <h2>pass phrase by mohammed shahid</h2>
-    </body>
+    <form>
+
+        <label for="password" >enter the secret phrase</label>
+        <input type="password" id="password" name="password" value="let me in" ><br>
+        <br>
+
+        <label for="guesspassword">enter a phrase</label>
+        <input type="text" id="guesspassword" name="guesspassword" autofocus><br>
+        <br>
+        <button type="button" onclick="processPhrase()">check the phrase</form></button>
+        <br>
+        <br>
+    </form>
+
+    <p id="resultedval">the text will be replaced</p>
+    <script>
+
+        let current=0;
+        let wrong=0;
+
+        function processPhrase()
+        {
+
+            let secretvalue=document.getElementById("password").value;
+            let guessedvalue=document.getElementById("guesspassword").value;
+
+            if(secretvalue==guessedvalue)
+            {
+                correct += 1;
+                alert("access allowed");
+                document.getElementById("resultedval").innerHTML="your result correct count: " +correct;
+
+
+            }
+            else{
+                wrong += 1;
+                alert("access denied");
+                document.getElementById("resultedval").innerHTML="your result wrong count: " +wrong;
+
+
+            }
+        }
+    </script>
+</body>
 </html>
 </html>
